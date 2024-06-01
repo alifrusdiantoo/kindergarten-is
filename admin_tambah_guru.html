@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Guru - Admin</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              lightgrey: "#E5EAF6",
+              dark: "#1e293b",
+              primary: "#3E3D6D",
+              secondary: "#929EBC",
+            },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter text-dark bg-white">
+    <!-- START HEADER -->
+    <section class="w-full h-[196px] bg-primary text-white">
+      <div class="flex flex-wrap">
+        <div class="w-4/5 font-bold text-3xl p-5">
+          <h1>Selamat Datang, Di Aplikasi Penilaian</h1>
+          <h1>KindergartenIS</h1>
+        </div>
+        <div class="flex justify-between w-1/5 px-3 py-1 font-light h-8">
+          <p class="">Login Sebagai <span>admin</span></p>
+          <span>-</span>
+          <a href="" class="hover:text-slate-300">Logout</a>
+        </div>
+      </div>
+    </section>
+    <!-- END HEADER -->
+
+    <!-- START TAMBAH GURU -->
+    <section class="w-full">
+      <!-- WRAPPER CARD -->
+      <div
+        class="container w-3/4 bg-lightgrey mx-auto mt-10 mb-3 rounded-md overflow-hidden shadow-2xl"
+      >
+        <!-- HEADER CARD -->
+        <div class="w-full bg-primary px-[30px] py-3">
+          <h1 class="text-white font-extralight text-2xl">
+            Data Guru => Insert
+          </h1>
+        </div>
+        <!-- CONTENT -->
+        <div class="w-full px-3 py-14">
+          <form action="" method="" class="w-3/5 relative mx-auto">
+            <!-- INPUT IMAGE -->
+            <label
+              for="imageInput"
+              class="block font-bold text-primary text-lg tracking-widest"
+            >
+              Foto Profil
+            </label>
+            <input
+              class="absolute w-full h-48 z-10 opacity-0 cursor-pointer"
+              type="file"
+              id="imageInput"
+              name="imageInput"
+              accept="image/*"
+              required
+            />
+            <!-- COVER IMAGE INPUT -->
+            <div
+              id="imageInputDisplay"
+              class="flex justify-center items-center w-full h-48 border-2 border-dashed border-primary rounded-lg bg-slate-50 mb-7"
+            >
+              <div class="text-center">
+                <img
+                  class="mb-3 block mx-auto"
+                  src="img/image-icon.png"
+                  width="50"
+                  alt="icon"
+                />
+                <p class="font-semibold">
+                  Drag and drop or click here to upload image
+                </p>
+                <p class="font-light">Upload any images from device</p>
+              </div>
+            </div>
+            <!-- NUPTK -->
+            <label
+              for="nuptk"
+              class="block font-bold text-primary text-lg tracking-widest"
+              >NUPTK</label
+            >
+            <input
+              type="number"
+              id="nip"
+              name="nip"
+              placeholder="Masukkan Nomor Induk Pegawai"
+              required
+              class="w-full px-3 p-2 -mb-2 rounded-md focus:outline-primary"
+            />
+            <hr class="w-full h-4 bg-slate-300 rounded-b-md mb-4 block" />
+            <!-- NAMA -->
+            <label
+              for="nama_guru"
+              class="block font-bold text-primary text-lg tracking-widest"
+              >Nama</label
+            >
+            <input
+              type="text"
+              id="nama_guru"
+              name="nama_guru"
+              placeholder="Masukkan Nama Guru"
+              required
+              class="w-full px-3 p-2 -mb-2 rounded-md focus:outline-primary"
+            />
+            <hr class="w-full h-4 bg-slate-300 rounded-b-md mb-4 block" />
+            <!-- ALAMAT -->
+            <label
+              for="alamat_guru"
+              class="block font-bold text-primary text-lg tracking-widest"
+              >Alamat</label
+            >
+            <textarea
+              type="text"
+              id="alamat_guru"
+              name="alamat_guru"
+              placeholder="Masukkan Alamat"
+              required
+              class="w-full h-20 px-3 p-2 -mb-2 rounded-md focus:outline-primary resize-none"
+            ></textarea>
+            <hr class="w-full h-2.5 bg-slate-300 rounded-b-md mb-4 block" />
+            <!-- TELEPON -->
+            <label
+              for="telepon"
+              class="block font-bold text-primary text-lg tracking-widest"
+              >Telepon</label
+            >
+            <input
+              type="text"
+              id="telepon"
+              name="telepon"
+              placeholder="Masukkan nomor telepon"
+              required
+              class="w-full px-3 p-2 -mb-2 rounded-md focus:outline-primary"
+            />
+            <hr class="w-full h-4 bg-slate-300 rounded-b-md mb-4 block" />
+            <!-- SUBMIT -->
+            <input
+              type="submit"
+              value="Tambah"
+              name="submit"
+              class="w-full mt-4 bg-primary text-white font-semibold p-2 rounded-md hover:bg-secondary cursor-pointer"
+            />
+          </form>
+        </div>
+      </div>
+      <!-- TOMBOL KEMBALI -->
+      <div class="container w-3/4 mx-auto flex justify-end">
+        <a
+          href="admin_dashboard.html"
+          class="py-2.5 px-2 mt-4 flex justify-end items-center gap-2 bg-lightgrey rounded-md hover:brightness-75"
+          ><img src="img/back.png" class="w-5" />
+          <p>Kembali</p></a
+        >
+      </div>
+    </section>
+    <!-- END TAMBAH GURU -->
+
+    <!-- START FOOTER -->
+    <footer class="w-full py-3 bg-primary px-5 mt-10">
+      <h1 class="text-white font-extralight">2024 - KindergartenIS</h1>
+    </footer>
+    <!-- END FOOTER -->
+
+    <script>
+      // Inisialisasi tampilan input gambar
+      const displayImagePreview = (inputElement, previewContainerId) => {
+        const file = inputElement.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const previewContainer =
+              document.getElementById(previewContainerId);
+            previewContainer.innerHTML = `<img src="${e.target.result}" class="w-full h-full object-contain rounded-md" />`;
+          };
+          reader.readAsDataURL(file);
+        }
+      };
+
+      const originalImageInput = document.getElementById("imageInput");
+
+      if (originalImageInput) {
+        originalImageInput.addEventListener("change", () => {
+          displayImagePreview(originalImageInput, "imageInputDisplay");
+        });
+      }
+    </script>
+  </body>
+</html>

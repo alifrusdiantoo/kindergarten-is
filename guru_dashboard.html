@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Guru</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              lightgrey: "#E5EAF6",
+              dark: "#1e293b",
+              primary: "#3E3D6D",
+              secondary: "#929EBC",
+            },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter text-dark bg-white">
+    <!-- START HEADER -->
+    <section class="w-full h-[196px] bg-primary text-white shadow-lg">
+      <div class="flex flex-wrap">
+        <div class="w-4/5 font-bold text-3xl p-5">
+          <h1>Selamat Datang, Di Aplikasi Penilaian</h1>
+          <h1>KindergartenIS</h1>
+        </div>
+        <div class="flex justify-between w-1/5 px-3 py-1 font-light h-8">
+          <p class="">Login Sebagai <span>Guru</span></p>
+          <span>-</span>
+          <a href="login.html" class="hover:text-slate-300">Logout</a>
+        </div>
+      </div>
+      <!-- TABS BUTTON -->
+      <div class="mt-8 pb-1 px-5">
+        <div class="bg-white inline-block rounded-md p-1">
+          <button
+            data-tab-target="#tab1"
+            class="w-44 py-2 px-3 text-primary font-semibold rounded-md hover:bg-secondary hover:bg-opacity-50"
+          >
+            Data Siswa
+          </button>
+          <button
+            data-tab-target="#tab2"
+            class="w-44 py-2 px-3 text-primary font-semibold rounded-md hover:bg-secondary hover:bg-opacity-50"
+          >
+            Nilai Siswa
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- END HEADER -->
+
+    <!-- START TAB DATA SISWA -->
+    <section id="tab1" class="tab-content hidden">
+      <!-- CARD WRAPPER -->
+      <div
+        class="container bg-lightgrey mx-auto mt-10 mb-3 rounded-md overflow-hidden shadow-2xl"
+      >
+        <!-- HEADER -->
+        <div class="w-full bg-primary px-[30px] py-3">
+          <h1 class="text-white font-extralight text-2xl">Data Siswa</h1>
+        </div>
+        <!-- TABLE CONTENT -->
+        <div class="w-full px-3 py-14">
+          <table class="w-full mx-auto text-center border-collapse">
+            <tr class="border-y-2 border-dark">
+              <th class="py-3">No</th>
+              <th class="w-32">NIS</th>
+              <th class="w-32">Nama</th>
+              <th class="w-48">TTL</th>
+              <th class="w-28">Jenis Kelamin</th>
+              <th class="w-48">Alamat</th>
+              <th class="w-32">Nama Ayah</th>
+              <th class="w-32">Nama Ibu</th>
+              <th class="w-56">Action</th>
+            </tr>
+            <tr class="border-y-2 border-dark">
+              <td>1</td>
+              <td>227006077</td>
+              <td>Tusril Koji</td>
+              <td>Nagasaki, 6 Agustus 1945</td>
+              <td>Laki-laki</td>
+              <td>Jl. Pegangsaan Timur, No. 56</td>
+              <td>Narto</td>
+              <td>Kendall Jenner</td>
+              <td>
+                <div class="flex justify-center gap-4 py-5">
+                  <a href="lihat_datasiswa.html" class="bg-[#78E36F] p-2 rounded-md hover:brightness-75"><img src="img/lihat.png" alt="icon-lihat" width="25" ></a>
+                  <a href="guru_tambah_siswa.html" class="bg-[#7AB5CD] p-2 rounded-md hover:brightness-75"><img src="img/edit.png" alt="icon-edit" width="25"></a>
+                  <a href="" class="bg-[#EF3434] p-2 rounded-md hover:brightness-75"><img src="img/hapus.png" alt="icon-hapus" width="25"></a>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-y-2 border-dark">
+              <td>2</td>
+              <td>30091965</td>
+              <td>Yunus Kiri</td>
+              <td>Lubang Buaya, 30 September 1965</td>
+              <td>Laki-laki</td>
+              <td>Jl. Pegangsaan Timur, No. 56</td>
+              <td>Christiano Ronaldo</td>
+              <td>Siti Mangrove</td>
+              <td>
+                <div class="flex justify-center gap-4 py-5">
+                  <a href="lihat_datasiswa.html" class="bg-[#78E36F] p-2 rounded-md hover:brightness-75"><img src="img/lihat.png" alt="icon-lihat" width="25" ></a>
+                  <a href="guru_tambah_siswa.html" class="bg-[#7AB5CD] p-2 rounded-md hover:brightness-75"><img src="img/edit.png" alt="icon-edit" width="25"></a>
+                  <a href="" class="bg-[#EF3434] p-2 rounded-md hover:brightness-75"><img src="img/hapus.png" alt="icon-hapus" width="25"></a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- TOMBOL TAMBAH DATA SISWA -->
+      <div class="container mx-auto flex justify-end"><a href="guru_tambah_siswa.html" class="px-2 mt-4 flex justify-end items-center gap-2 bg-lightgrey rounded-md hover:brightness-75"><p class="text-4xl font-extrabold mb-1">+</p><p>Add Data Siswa</p></a></div>
+    </section>
+    <!-- END TAB DATA SISWA -->
+
+    <!-- START TAB NILAI SISWA -->
+    <section id="tab2" class="tab-content hidden">
+      <!-- CARD WRAPPER -->
+      <div
+        class="container bg-lightgrey mx-auto mt-10 mb-3 rounded-md overflow-hidden shadow-2xl"
+      >
+        <!-- HEADER -->
+        <div class="w-full bg-primary px-[30px] py-3">
+          <h1 class="text-white font-extralight text-2xl">Nilai Siswa</h1>
+        </div>
+        <!-- TABLE CONTENT -->
+        <div class="w-full px-3 py-14">
+          <table class="w-full mx-auto text-center border-collapse">
+            <tr class="border-y-2 border-dark">
+              <th class="py-3">No</th>
+              <th class="w-48">NIS</th>
+              <th class="w-48">Nama</th>
+              <th class="w-72">Mata Pelajaran</th>
+              <th class="w-32">Nilai</th>
+              <th class="w-32">Skor</th>
+              <th class="w-36">Keterangan</th>
+              <th class="w-72">Action</th>
+            </tr>
+            <tr class="border-y-2 border-dark">
+              <td>1</td>
+              <td>227006077</td>
+              <td>Tusril Koji</td>
+              <td>Tawuran Antar Paud</td>
+              <td>95</td>
+              <td>A+</td>
+              <td>Lulus</td>
+              <td>
+                <div class="flex justify-center gap-4 py-5">
+                  <a href="lihat_nilaisiswa.html" class="bg-[#78E36F] p-2 rounded-md hover:brightness-75"><img src="img/lihat.png" alt="icon-lihat" width="25" ></a>
+                  <a href="guru_tambah_nilai.html" class="bg-[#7AB5CD] p-2 rounded-md hover:brightness-75"><img src="img/edit.png" alt="icon-edit" width="25"></a>
+                  <a href="" class="bg-[#EF3434] p-2 rounded-md hover:brightness-75"><img src="img/hapus.png" alt="icon-hapus" width="25"></a>
+                </div>
+              </td>
+            </tr>
+            
+          </table>
+        </div>
+      </div>
+      <!-- TOMBOL TAMBAH NILAI SISWA -->
+      <div class="container mx-auto flex justify-end"><a href="guru_tambah_nilai.html" class="px-2 mt-4 flex justify-end items-center gap-2 bg-lightgrey rounded-md hover:brightness-75"><p class="text-4xl font-extrabold mb-1">+</p><p>Add Nilai Siswa</p></a></div>
+    </section>
+    <!-- END TAB NILAI SISWA -->
+
+    <!-- START FOOTER -->
+    <footer class="w-full py-3 bg-primary px-5 mt-10">
+      <h1 class="text-white font-extralight">2024 - KindergartenIS</h1>
+    </footer>
+    <!-- END FOOTER -->
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>

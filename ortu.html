@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biodata Siswa - Orangtua</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              lightgrey: "#E5EAF6",
+              dark: "#1e293b",
+              primary: "#3E3D6D",
+              secondary: "#929EBC",
+            },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter text-dark bg-white">
+    <!-- START HEADER -->
+    <section class="w-full  h-[196px] bg-primary text-white">
+      <div class="flex flex-wrap">
+        <div class="w-3/4 font-bold text-3xl p-5">
+          <h1>Selamat Datang, Di Aplikasi Penilaian</h1>
+          <h1>KindergartenIS</h1>
+        </div>
+        <div class="flex justify-between w-1/4 px-3 py-1 font-light h-8">
+          <p class="pl-11">Login Sebagai <span>Orangtua</span></p>
+          <span>-</span>
+          <a href="login.html" class="hover:text-slate-300">Logout</a>
+        </div>
+      </div>
+      <div class="bg-white w-64 mt-[32px] py-3 rounded-t-lg z-10 absolute">
+        <h1 class="text-primary text-center text-lg font-semibold">Laporan Hasil Belajar Siswa</h1>
+      </div>
+      <hr class="bg-secondary w-[266px] h-16 border-0 absolute left- top-[132px] rounded-tl-[20px] rounded-e-xl">
+    </section>
+    <!-- END HEADER -->
+
+    <!-- START BIODATA -->
+    <section class="w-full">
+      <!-- WRAPPER CARD -->
+      <div
+        class="container w-3/4 bg-lightgrey mx-auto mt-10 mb-24 overflow-hidden shadow-2xl"
+      >
+        <!-- HEADER CARD -->
+        <div class="w-full bg-primary px-[30px] py-3">
+          <h1 class="text-white font-extralight text-3xl text-center">Biodata Siswa</h1>
+        </div>
+        <!-- CONTENT -->
+        <div class="w-full mt-8 mb-20 px-3">
+          <!-- FOTO PROFIL -->
+          <div class="w-full">
+            <img src="img/profil.png" alt="foto-profil" width="150" class="mx-auto p-3 bg-white">
+          </div>
+          <!-- BIODATA -->
+          <table class="mx-auto w-full flex justify-center mt-10 mb-14 font-light text-lg">
+            <tr>
+              <td class="pb-3 w-64">NIS</td>
+              <td class="pb-3">:</td>
+              <td class="pb-3 w-64">227006077</td>
+            </tr>
+            <tr>
+              <td class="pb-3 w-64">Nama Lengkap</td>
+              <td class="pb-3">:</td>
+              <td class="pb-3 w-64">Tusril Koji</td>
+            </tr>
+            <tr>
+              <td class="pb-3 w-64">Tempat, Tanggal Lahir</td>
+              <td class="pb-3">:</td>
+              <td class="pb-3 w-64">Nagasaki, 06 Agustus 1945</td>
+            </tr>
+            <tr>
+              <td class="pb-3 w-64">Jenis Kelamin</td>
+              <td class="pb-3">:</td>
+              <td class="pb-3 w-64">Laki-laki</td>
+            </tr>
+            <tr>
+              <td class="pb-3 w-64">Alamat</td>
+              <td class="pb-3">:</td>
+              <td class="pb-3 w-64">Jl. Pegangsaan Timur, No. 56</td>
+            </tr>
+            <tr>
+              <td class="pb-3 w-64">Nama Ayah</td>
+              <td class="pb-3">:</td>
+              <td class="pb-3 w-64">Cristiano Ronaldo</td>
+            </tr>
+            <tr>
+              <td class="pb-3 w-64">Nama Ibu</td>
+              <td class="pb-3">:</td>
+              <td class="pb-3 w-64">Siti Mangrove</td>
+            </tr>
+          </table>
+          <!-- TOMBOL CETAK -->
+          <div class="text-center">
+            <a href="cetak_laporan.html" class="bg-primary px-3 py-3 rounded-md text-white hover:brightness-150">Cetak Laporan Hasil Belajar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END BIODATA -->
+
+    
+
+    <!-- START FOOTER -->
+    <footer class="w-full py-3 bg-primary px-5 mt-10">
+      <h1 class="text-white font-extralight">2024 - KindergartenIS</h1>
+    </footer>
+    <!-- END FOOTER -->
+  </body>
+</html>
