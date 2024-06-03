@@ -3,9 +3,10 @@
 
     $nilai = new nilai();
     $idNilai = $_GET['id'];
+    $aksi = $_GET['aksi'];
 
-    if(isset($_GET['aksi'])){
-        if($_GET['aksi'] == 'edit'){
+    if(isset($aksi)){
+        if($aksi == 'edit'){
             // Ambil data nilai
             $dataNilai = $nilai->lihatNilai($idNilai);
 
@@ -27,7 +28,7 @@
     }
 
     if(isset($_POST['submit'])){
-        if($_GET['aksi'] == 'edit'){
+        if($aksi == 'edit'){
             $edit = $nilai->edit($_POST, $idNilai);
         }
     }
@@ -123,7 +124,7 @@
         </div>
       </div>
       <!-- TOMBOL KEMBALI -->
-      <div class="container w-3/4 mx-auto flex justify-end"><a href="guru_dashboard.html" class="py-2.5 px-2 mt-4 flex justify-end items-center gap-2 bg-lightgrey rounded-md hover:brightness-75"><img src="../content/img/back.png" class="w-5"><p>Kembali</p></a></div>
+      <div class="container w-3/4 mx-auto flex justify-end"><a href="?hal=siswa" class="py-2.5 px-2 mt-4 flex justify-end items-center gap-2 bg-lightgrey rounded-md hover:brightness-75"><img src="../content/img/back.png" class="w-5"><p>Kembali</p></a></div>
     </section>
     <!-- END TAMBAH GURU -->
 

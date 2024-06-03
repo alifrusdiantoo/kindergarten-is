@@ -314,9 +314,9 @@
       <!-- TOMBOL KEMBALI -->
       <div class="container w-3/4 mx-auto flex justify-end">
         <a
-          href="guru_dashboard.html"
+          href="?hal=siswa"
           class="py-2.5 px-2 mt-4 flex justify-end items-center gap-2 bg-lightgrey rounded-md hover:brightness-75"
-          ><img src="img/back.png" class="w-5" />
+          ><img src="../content/img/back.png" class="w-5" />
           <p>Kembali</p></a
         >
       </div>
