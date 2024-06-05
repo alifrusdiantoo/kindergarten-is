@@ -159,9 +159,9 @@
             $query = "DELETE FROM tb_guru WHERE id_guru = '$id'";
             try {
                 mysqli_query($this->database->koneksi, $query);
-                return "<script>
+                echo "<script>
+                    document.location = '?hal=dashboard';
                     alert('Hapus Data Sukses');
-                    document.location='?hal=dashboard';
                 </script>";
             } catch (Exception $e){
                 header('Location:?hal=dashboard');

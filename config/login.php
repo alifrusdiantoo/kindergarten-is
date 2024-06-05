@@ -28,7 +28,7 @@
     } else {
         echo "<script>
             alert('Login gagal. Username atau password salah!');
-            document.location = '../index.php';
+            document.location = '../login.php';
         </script>";
     }
 ?>

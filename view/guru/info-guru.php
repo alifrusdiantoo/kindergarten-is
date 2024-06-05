@@ -49,7 +49,7 @@
         <div class="flex justify-between w-1/5 px-3 py-1 font-light h-8">
           <p class="">Login Sebagai <span>Guru</span></p>
           <span>-</span>
-          <a href="login.html" class="hover:text-slate-300">Logout</a>
+          <a href="../config/logout.php" class="hover:text-slate-300">Logout</a>
         </div>
       </div>
     </section>
