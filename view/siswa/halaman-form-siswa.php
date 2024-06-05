@@ -129,24 +129,25 @@
             </select>
             <hr class="w-full h-4 bg-slate-300 rounded-b-md mb-4 block" />
             <!-- INPUT IMAGE -->
-            <label for="foto" class="block font-bold text-primary text-lg tracking-widest">Foto Profil</label>
-            <input type="text" name="isi-foto" value="<?=@ $foto?>" style="display: none;">
-            <input class="absolute w-full h-48 z-10 opacity-0 cursor-pointer" type="file" id="foto" name="foto" accept="image/*" <?= $aksi == 'edit' ? '' : 'required' ?>/>
-            <!-- COVER IMAGE INPUT -->
-            <div id="imageInputDisplay" class="flex justify-center items-center w-full h-48 border-2 border-dashed border-primary rounded-lg bg-slate-50 mb-7">
-              <div class="text-center">
-                <img
-                  class="mb-3 block mx-auto"
-                  src="../content/img/image-icon.png"
-                  width="50"
-                  alt="icon"
-                />
-                <p class="font-semibold">
-                  Drag and drop or click here to upload image
-                </p>
-                <p class="font-light">Upload any images from device</p>
+            <label class="block font-bold text-primary text-lg tracking-widest"> Foto Profil </label>
+            <input type="text" name="isi-foto" value="<?=@ $foto?>" hidden>
+            <label for="inputImage" id="drop-area" class="block font-bold text-primary text-lg tracking-widest">
+              <input class="absolute w-full h-48 z-10 opacity-0 cursor-pointer" type="file" id="inputImage" name="foto" accept="image/*" <?= $aksi == 'edit' ? '' : 'required' ?> hidden/>
+              <div id="img-view" class="flex justify-center items-center w-full h-48 border-2 border-dashed border-primary rounded-lg bg-contain bg-center bg-no-repeat bg-slate-50 mb-7">
+                <div class="text-center">
+                  <img
+                    class="mb-3 block mx-auto"
+                    src="../content/img/image-icon.png"
+                    width="50"
+                    alt="icon"
+                  />
+                  <p class="font-semibold">
+                    Drag and drop or click here to upload image
+                  </p>
+                  <p class="font-light">Upload any images from device</p>
+                </div>
               </div>
-            </div>
+            </label>
             <!-- NIS -->
             <label
               for="nis"
@@ -328,5 +329,6 @@
       <h1 class="text-white font-extralight">2024 - KindergartenIS</h1>
     </footer>
     <!-- END FOOTER -->
+    <script src="../script/image-upload.js"></script>
   </body>
 </html>
